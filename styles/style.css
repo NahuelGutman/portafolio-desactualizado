@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
+
+
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+
+    --fuente-mont: 'montserrat', sans-serif;
+    --fuente-krona: 'Krona one', sans-serif;
+    --font-size-rem: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 13%;
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-mont);
+    font-size: var(--font-size-rem);
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 2% 13%; /*Genera un margen alrededor de la sección*/
+    justify-content: space-between; /*control la posicion de los elementos hijos a lo largo del eje principal y ayuda a disrtibuir el espacio entre ellos*/
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+
+}
+
+.presentacion__contenido__texto {
+    font-size: var(--font-size-rem);
+    font-family: var(--fuente-mont);
+    color: var(--color-secundario);
+}
+
+.botones_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.boton_enlace{
+    width: 50%;
+    text-align: center; /*Centra el texto dentro del content*/
+    padding: 21.5px 0; /*Limpia un area alrededor del contenido*/
+    border-radius: 8px; /*Genera que el radio del boton sea redondeado, se debe de jugar con los px*/
+    font-family: var(--fuente-krona); 
+    font-size: var(--font-size-rem); /*Elige el tamaño, siempre por px*/
+    font-weight: 600; /*Elige estilo de la letra*/
+    text-decoration: none; /*Quita las lineas subrayadas del enlace*/
+    color: var(--color-secundario); /*coloca color al texto unicamente*/
+    border: 2px solid var(--color-terciario); /* Esto genera un borde solido de px*/
+    display: flex; /*alinea los elementos de la caja*/
+    justify-content: center; /*Centra el texto y las imagenes*/
+    gap: 10px;/*Genera que haya un espacio entre el texto*/
+}
+
+.subtitulo_enlaces {
+    font-family: var(--fuente-krona);
+    font-size: var(--font-size-rem);
+    color: var(--color-secundario);
+    font-weight: 400;
+}
+
+.boton_enlace:hover{ /*cambia el color del boton al poner el mouse arriba*/
+    background-color: #272727;
+}
+
+.img_gnrl{
+    width: 50%;
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-mont);
+    font-size: var(--font-size-rem);
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){
+    .header{
+    padding: 2% 0% 0% 13%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .img_gnrl{
+        justify-content: center;
+    }
+
+    .presentacion__contenido{
+        width: auto; /*si el width es auto, siempre se va a adaptar al elemento padre*/
+    }
+}
